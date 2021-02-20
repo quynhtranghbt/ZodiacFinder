@@ -51,14 +51,47 @@ app.setHandler({
     },
 
     ZodiacFactsIntent() {
-        console.log(zodiac.Aries.description)
-        console.log(this.$inputs.zodiacSign)
         let userSign = this.$inputs.zodiacSign.value
         if (userSign === "Aries"){
-
-            console.log(userSign)
             return this.tell(zodiac.Aries.description)
         }
+        else if (userSign === "Taurus"){
+            return this.tell(zodiac.Taurus.description)
+        }
+        else if (userSign === "Gemini"){
+            return this.tell(zodiac.Gemini.description)
+        }
+        else if (userSign === "Cancer"){
+            return this.tell(zodiac.Cancer.description)
+        }
+        else if (userSign === "Leo"){
+            return this.tell(zodiac.Leo.description)
+        }
+        else if (userSign === "Virgo"){
+            return this.tell(zodiac.Virgo.description)
+        }
+        else if (userSign === "Libra"){
+            return this.tell(zodiac.Libra.description)
+        }
+        else if (userSign === "Scorpio"){
+            return this.tell(zodiac.Scorpio.description)
+        }
+        else if (userSign === "Sagittarius"){
+            return this.tell(zodiac.Sagittarius.description)
+        }
+        else if (userSign === "Capricorn"){
+            return this.tell(zodiac.Capricorn.description)
+        }
+        else if (userSign === "Aquarius"){
+            return this.tell(zodiac.Aquarius.description)
+        }
+        else if (userSign === "Pisces"){
+            return this.tell(zodiac.Pisces.description)
+        }
+        else{
+            return this.tell("Please tell me the sign.")
+        }
+
         this.tell('Zodiac facts');
     },
 
