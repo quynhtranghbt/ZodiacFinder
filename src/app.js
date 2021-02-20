@@ -29,12 +29,20 @@ app.setHandler({
         return this.toIntent('HelloWorldIntent');
     },
 
-    HelloWorldIntent() {
-        this.ask('Hello World! What\'s your name?', 'Please tell me your name.');
+    WelcomIntent() {
+        this.ask('Welcome');
     },
 
-    MyNameIsIntent() {
-        this.tell('Hey ' + this.$inputs.name.value + ', nice to meet you!');
+    ZodiacDatesIntent() {
+        this.ask('Zodiac sign!');
+    },
+
+    ZodiacFactsIntent() {
+        this.tell('Zodiac facts');
+    },
+
+    ZodiacFinderIntent() {
+        this.tell('Zodiac finder');
     },
 });
 
