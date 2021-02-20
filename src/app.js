@@ -34,7 +34,7 @@ app.setHandler({
 
     WelcomeIntent() {
         const welcomeMsg = ["Welcome to Zodiac Finder!", "Hello! Welcome to Zodiac Finder", "Hello! This is Zodiac Finder", "Hi! I am a Zodiac Finder"]
-        const introMsg = ["I can tell dates of zodiac signs, what your zodiac sign is and facts about it.", "Tell me your birthday and I can tell your zodiac sign."]
+        const introMsg = ["I can tell date range of zodiac signs, what your zodiac sign is and facts about it.", "Tell me your birthday and I can tell your zodiac sign."]
         
         this.$speech.addText(welcomeMsg).addBreak("300ms").addText(introMsg)
 
@@ -47,8 +47,13 @@ app.setHandler({
     },
 
     ZodiacDatesIntent() {
-        
-        this.tell('Zodiac sign!');
+        let userSign = this.$inputs.zodiacSign.value   
+        if (zodiac[userSign] !=null){
+            let start = moment(zodiac[userSign].startDate).format("MMMM Do")
+            let end = moment(zodiac[userSign].endDate).format("MMMM Do")
+            this.$speech.addText(userSign + " is from " + start + " to " + end)
+        }     
+        this.tell(this.$speech);
     },
 
     ZodiacFactsIntent() {
