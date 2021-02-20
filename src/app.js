@@ -51,12 +51,8 @@ app.setHandler({
     },
 
     ZodiacFactsIntent() {
-        console.log(zodiac.Aries.description)
-        console.log(this.$inputs.zodiacSign)
         let userSign = this.$inputs.zodiacSign.value
         if (userSign === "Aries"){
-
-            console.log(userSign)
             return this.tell(zodiac.Aries.description)
         }
         this.tell('Zodiac facts');
