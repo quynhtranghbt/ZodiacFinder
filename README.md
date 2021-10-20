@@ -45,5 +45,5 @@ https://dialogflow.cloud.google.com/
 #
 
 ### Winner of Best UI/UI Hack - HackHERS 2021
-https://devpost.com/software/zodiacfinder
+https://devpost.com/software/zodiacfinder 
 https://www.linkedin.com/in/trang-nguyen-2021/
