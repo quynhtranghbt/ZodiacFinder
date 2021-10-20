@@ -43,3 +43,6 @@ https://developer.amazon.com/alexa/console/ask
 https://dialogflow.cloud.google.com/
 
 #
+
+### Winner of Best UI/UI Hack - HackHERS 2021
+https://devpost.com/software/zodiacfinder
